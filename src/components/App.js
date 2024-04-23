@@ -3,7 +3,7 @@ import React from "react";
 import {
   BrowserRouter,
   Route,
-  Routes,
+  Switch,
   NavLink,
 } from "react-router-dom";
 import Home from "./Home";
@@ -17,10 +17,10 @@ const App = () => {
       <li> <NavLink to="/about">About</NavLink></li> 
       </ul>
 
-      <Routes>
+      <Switch>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />}/>
-      </Routes>
+      </Switch>
     </BrowserRouter>
   );
 };
