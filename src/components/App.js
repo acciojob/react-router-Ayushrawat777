@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Route,
   Routes,
   NavLink,
@@ -11,7 +11,7 @@ import About from "./About";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <ul>
       <li> <NavLink to="/">Home</NavLink></li> 
       <li> <NavLink to="/about">About</NavLink></li> 
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />}/>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 
