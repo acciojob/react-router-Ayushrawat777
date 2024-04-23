@@ -1,28 +1,18 @@
 import React from "react";
-
-import {
-  BrowserRouter,
-  Route,
-  Switch,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
-
+import Switch from "./Switch";
 const App = () => {
   return (
     <BrowserRouter>
-      <ul>
-      <li> <NavLink to="/">Home</NavLink></li> 
-      <li> <NavLink to="/about">About</NavLink></li> 
-      </ul>
-
-      <Switch>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />}/>
-      </Switch>
+      <Routes>
+        <Route path="" element={<Switch />}>
+          <Route path="" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 };
-
 export default App;
