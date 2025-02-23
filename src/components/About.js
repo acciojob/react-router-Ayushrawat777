@@ -1,11 +1,12 @@
 import React from "react";
 
-function About() {
-    return (
-        <div>
-            <h2>About</h2>
-            <p>This is a sample React Router program.</p>
-        </div>
-    );
-}
-export default About;    
+const About = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This is a sample React Router program.</p>
+    </div>
+  );
+};
+
+export default About;
